@@ -3,17 +3,14 @@
 :root {
   --white: #e3e3e3;
   --black: #111113;
+  --blue: #2d323e;
   --main-bg-color: var(--white);
   --main-text-color: var(--black);
+  --default-padding: 25px;
 }
 
 * {
   box-sizing: border-box;
-}
-
-.test {
-  width: 100%;
-  height: 100px;
 }
 
 html,
@@ -30,20 +27,30 @@ body {
   height: 100%;
 }
 
-.cv-container {
-  min-height: 100%;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  height: 100%;
 }
 
 .side-container {
-  min-height: 100%;
-  flex-basis: 300px;
-  background: var(--black);
+  background: var(--blue);
   color: var(--white);
+  display: grid;
+  grid-template-rows: 25%;
 }
 
 .main-container {
-  flex-grow: 1;
+  display: grid;
+  grid-template-rows: 25% 1fr;
+}
+
+.container-cell {
+  padding: var(--default-padding);
 }
