@@ -27,6 +27,7 @@ body {
 h1,
 h2,
 h3,
+h4,
 p {
   margin: 0;
   font-weight: 300;
@@ -47,8 +48,6 @@ p {
 .side-container {
   background: var(--blue);
   color: var(--white);
-  display: grid;
-  grid-template-rows: auto;
 }
 
 .main-container {
@@ -88,4 +87,9 @@ ul li {
 
 .link-list li a {
   color: inherit;
+}
+
+.work-experience-info {
+  display: flex;
+  justify-content: space-between;
 }
