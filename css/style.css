@@ -7,6 +7,7 @@
   --main-bg-color: var(--white);
   --main-text-color: var(--black);
   --default-padding: 25px;
+  --default-margin: 10px;
 }
 
 * {
@@ -21,7 +22,7 @@ body {
 
 body {
   font-family: 'Raleway', sans-serif;
-  padding: var(--default-padding);
+  padding: var(--default-padding) * 2;
 }
 
 h1,
@@ -31,6 +32,26 @@ h4,
 p {
   margin: 0;
   font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+}
+
+h1 {
+  margin-bottom: calc(var(--default-margin) * 2);
+}
+
+h2 {
+  margin-bottom: var(--default-margin);
+}
+
+h4,
+h3 {
+  font-weight: 900;
 }
 
 .container {
@@ -59,9 +80,12 @@ p {
   padding: var(--default-padding);
 }
 
+.main-container > .container-cell {
+  padding: calc(var(--default-padding) * 2) calc(var(--default-padding) * 2) 0;
+}
+
 .profile-image-container {
   width: 100%;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,14 +106,38 @@ ul {
 }
 
 ul li {
-  margin-bottom: 10px;
+  font-weight: 300;
 }
 
 .link-list li a {
   color: inherit;
 }
 
+.work-experience,
+.work-experience-project:not(:last-child) {
+  margin-bottom: calc(var(--default-margin) * 2.5);
+  border-bottom: 1px solid;
+  padding-bottom: var(--default-padding);
+}
+
 .work-experience-info {
   display: flex;
   justify-content: space-between;
+}
+
+.work-experience-title,
+.work-experience-info {
+  font-weight: 900;
+}
+
+.work-experience-description {
+  margin: var(--default-margin) 0;
+}
+
+.skills-list li {
+  margin-bottom: var(--default-margin);
+}
+
+.personal-description:not(:last-child) {
+  margin-bottom: var(--default-margin);
 }
